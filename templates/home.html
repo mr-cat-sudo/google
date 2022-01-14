@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google clone</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='home.css')}}">
+</head>
+<body>
+
+  <nav>
+    <button class="signup">Login</button>
+    <a href="https://mail.google.com">Gmail</a>
+  </nav>
+
+  <header style="padding: 30px;">
+    <img src="https://f.hellowork.com/blogdumoderateur/2013/09/google-logo.png" width="200px">
+  </header>
+
+  <article>
+    <section class="searchSct"
+    style="display: flex; justify-content: center; padding-bottom: 20px;">
+      <input
+      style="padding: 10px; border-radius: 20px; border: 1px solid grey; outline: none;" 
+      type="search" placeholder="How'd you like to begin your jounrey?" id="searchInput">
+    </section>
+    <section class="links"
+    style="display: flex; justify-content: center;">
+      <section class="buttons">
+        <input type="button" value="Search on Google" id="searchBtn" onclick="search()" class="button">
+        <button class="button">Im lucky !</button>
+        <p 
+        style="text-align: center; padding: 5px;">This is 100% real google not an <a href="#">IP GRABBER</a></p>
+      </section>
+    </section>
+  </article>
+
+  <!--thats the simplest js ever-->
+  <script>
+    function search() {
+      var s = document.getElementById("searchInput").value
+
+      if (s == "") {
+        
+      } else {
+        window.open("https://www.google.com/search?q="+ s);
+      }  
+    }
+  </script>
+
+
+</body>
+</html>
